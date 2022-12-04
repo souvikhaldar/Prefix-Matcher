@@ -9,6 +9,12 @@ type FileReader struct {
 	fileName string
 }
 
+func NewFileReader(file string) *FileReader {
+	return &FileReader{
+		fileName: file,
+	}
+}
+
 func (f *FileReader) Read() ([]string, error) {
 	file, err := os.Open(f.fileName)
 	if err != nil {
