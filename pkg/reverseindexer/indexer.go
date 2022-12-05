@@ -1,5 +1,5 @@
 package reverseindexer
 
 type ReverseIndexer interface {
-	ReverseIndex([]string) []map[rune][]string
+	ReverseIndex([]string) map[rune][]string
 }

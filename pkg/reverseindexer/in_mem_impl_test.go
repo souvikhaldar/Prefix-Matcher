@@ -7,11 +7,11 @@ import (
 )
 
 func TestReverseIndex(t *testing.T) {
-	fr := reader.NewFileReader("sp.txt")
+	fr := reader.NewFileReader("firstNames.txt")
 	in, _ := fr.Read()
 	ri := NewInMemIndexer()
 	rim := ri.ReverseIndex(in)
-	if len(rim[0]['a']) == 0 {
+	if len(rim["m"]) == 0 {
 		t.Fatal("Should not be empty")
 	}
 }
